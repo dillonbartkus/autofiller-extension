@@ -1,8 +1,7 @@
 const autofillForm = async () => {
   const emailInput =
     document.querySelector('input[id="email"]') ||
-    document.querySelector('input[name="email"]') ||
-    closest(document.querySelector('label[for="email"]'), "input");
+    document.querySelector('input[name="email"]');
 
   if (emailInput) {
     const emailValue = await chrome.storage.local.get("email");
