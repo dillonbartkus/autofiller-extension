@@ -1,0 +1,22 @@
+{
+  "name": "Autofiller",
+  "description": "Autofill name and email inputs on webpages",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "./icons/icon.png",
+    "default_title": "autofiller",
+    "default_popup": "main.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/autofill.js"],
+      "matches": ["https://*/*", "http://*/*"],
+      "exclude_matches": ["*://developer.chrome.com/*"]
+    }
+  ],
+  "permissions": ["scripting", "storage"]
+}

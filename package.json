@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "chrome-types": "^0.1.345"
+  }
+}
